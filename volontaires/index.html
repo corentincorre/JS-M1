@@ -1,22 +1,32 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="utf-8" />
 
-    <meta description="Volontaires" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+  <meta charset="utf-8" />
 
-    <link
-      rel="stylesheet"
-      href="https://necolas.github.io/normalize.css/latest/normalize.css"
-    />
-    <link rel="stylesheet" href="../../../styles/reset.css" />
-    <link rel="stylesheet" href="./style.css" />
+  <meta description="Volontaires" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <script src="./index.js" defer></script>
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css" />
+  <link rel="stylesheet" href="../../../styles/reset.css" />
+  <link rel="stylesheet" href="./style.css" />
 
-    <title>Volontaires</title>
-  </head>
+  <script src="./index.js" defer></script>
 
-  <body></body>
+  <title>Volontaires</title>
+</head>
+
+<body>
+  <div class="list-personnes"></div>
+  <button id="delete" class="btn btn-alert">Supprimer la liste de personnes</button>
+  <form>
+    <input id="player-add" type="text">
+    <button id="add" type="submit" class="btn">Ajouter le nom</button>
+  </form>
+  <button id="choose" class="btn">Choisir une personne</button>
+  <p>La personne choisit est :</p>
+  <div class="chosen"></div>
+
+</body>
+
 </html>
