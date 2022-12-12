@@ -1,0 +1,126 @@
+body {
+    font-family: 'Eurostile';
+    background-color: black;
+    background: center/cover no-repeat url("https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77701176623.jpg");
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+}
+
+.computer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    background-color: #4A4940;
+    border: outset rgb(88, 88, 85) 8px;
+    padding: 32px;
+    width: 1024px;
+    position: relative;
+}
+
+
+.res {
+    min-width: 50%;
+    background: repeating-linear-gradient(to bottom, #9a0e18 0px, #9a0e18 2px, #b1111b 2px, #b1111b 4px);
+    color: #e8d7d8;
+    border-radius: 12px;
+    border: inset rgb(88, 88, 85) 4px;
+    height: 350px;
+    position: relative;
+    padding: 16px;
+    overflow: hidden;
+}
+
+.res h2 {
+    font-weight: 300;
+    margin: 0;
+}
+
+.res:before {
+    content: "";
+    position: absolute;
+
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 6px;
+    border: 2px solid #e8d7d8;
+}
+
+.commandes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.btn {
+    color: white;
+    width: 80px;
+    height: 80px;
+    font-size: 24px;
+    font-weight: 700;
+    background-color: rgb(199, 46, 46);
+    border: outset rgb(175, 39, 39) 7px;
+    transition: all .3s;
+}
+
+.btn.random {
+    background-color: rgb(46, 48, 199);
+    border: outset rgb(59, 39, 175) 7px;
+    font-size: 14px;
+}
+
+.btn.all {
+    background-color: rgb(194, 194, 196);
+    border: outset rgb(166, 165, 169) 7px;
+    color: black;
+}
+
+.btn.active {
+    filter: brightness(150%);
+}
+
+.deco1 {
+    position: absolute;
+    background-color: #e8d7d8;
+    width: 2px;
+    height: calc(100% - 10px);
+    top: 5px;
+    right: 50px;
+}
+
+.deco2 {
+    position: absolute;
+    background-color: #e8d7d8;
+    width: 2px;
+    height: calc(100% - 10px);
+    top: 5px;
+    right: 80px;
+}
+
+.deco3 {
+    position: absolute;
+    background-color: #e8d7d8;
+    width: 2px;
+    height: calc(100% - 10px);
+    top: 100px;
+    right: 167px;
+    transform: rotate(61deg);
+}
+
+.deco4 {
+    position: absolute;
+    border: 2px solid #e8d7d8;
+    border-radius: 50px;
+    height: 100px;
+    width: 100px;
+    top: 205px;
+    right: 35px;
+}
