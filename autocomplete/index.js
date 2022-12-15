@@ -8,36 +8,31 @@ let regions = [];
 fetch(url + 'communes')
     .then((data) => data.json())
     .then((res) => {
-        communes = res;
-        communes.sort((a, b) => { a.population - b.population })
-        fetch(url + 'departements')
-            .then((data) => data.json())
-            .then((res) => {
-                departements = res;
-
-                fetch(url + 'regions')
-                    .then((data) => data.json())
-                    .then((res) => {
-                        regions = res;
-                        document.querySelector('#searchbar').addEventListener("input", (e) => {
-                            let data = e.target.value;
-                            autocomplete(data);
-                            let reslist = document.querySelectorAll('li')
-                            reslist.forEach(result => {
-                                result.addEventListener("click", (e) => {
-                                    let data = e.target;
-                                    displayRes(data);
-                                })
-                            })
-                        })
-
-
-
-
-                    })
-            })
+        communes = res.sort((a, b) => a.population - b.population);
     })
+fetch(url + 'departements')
+    .then((data) => data.json())
+    .then((res) => {
+        departements = res;
 
+    })
+fetch(url + 'regions')
+    .then((data) => data.json())
+    .then((res) => {
+        regions = res;
+
+    })
+document.querySelector('#searchbar').addEventListener("input", (e) => {
+    let data = e.target.value;
+    autocomplete(data);
+    let reslist = document.querySelectorAll('li')
+    reslist.forEach(result => {
+        result.addEventListener("click", (e) => {
+            let data = e.target;
+            displayRes(data);
+        })
+    })
+})
 
 function autocomplete(data) {
     searchResult.innerHTML = "";
