@@ -73,9 +73,7 @@ function getCaraters(number = null) {
                             film.classList.add('film');
                             films.append(film);
                         })
-
                 })
-                console.log(res);
             });
 
     }

@@ -47,3 +47,33 @@ main {
     padding: 16px 48px;
 
 }
+
+form {
+    position: relative;
+}
+
+.search-res {
+    list-style: none;
+    color: #000;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 40px;
+}
+
+.search-res li {
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+.commune {
+    background-color: #ffaaaa;
+}
+
+.departement {
+    background-color: #aaffaa;
+}
+
+.region {
+    background-color: #aaaaff;
+}
