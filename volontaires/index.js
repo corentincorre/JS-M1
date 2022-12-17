@@ -23,6 +23,10 @@ deleteButton.addEventListener('click', () => {
 
 addButton.addEventListener('click', (e) => {
     e.preventDefault();
+    /**
+     * Tu pourrais ne pas avoir besoin de refetch le localstorage à chaque click
+     * si tu t'arranges pour garder accessible la référence à la data chargée au début de la page
+     */
     let data = JSON.parse(localStorage.getItem('ListUsers'));
     if (inputUser.value) {
         createUser(inputUser.value);
@@ -39,6 +43,10 @@ addButton.addEventListener('click', (e) => {
 
 chooseButton.addEventListener('click', (e) => {
     e.preventDefault();
+    /**
+     * Attention à ne pas trop se baser sur le markup pour récupérer ta logique
+     * mais plutot faire l'inverse: construire ton markup en fonction d'une donnée
+     */
     let listValidPlayer = document.querySelectorAll('.user:not(.not-chosable)');
     if (listValidPlayer.length !== 0) {
         let nb = listValidPlayer.length;
